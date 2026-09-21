@@ -276,20 +276,7 @@ function Inicio() {
       </main>
 
 
-      {/* ==================================================
-          FOOTER
-      ================================================== */}
-      <footer className="footer">
-
-        <span>
-          Fuente de datos: SEACE - Datos Abiertos
-        </span>
-
-        <span>
-          Última actualización: 20/05/2024 10:30 a. m.
-        </span>
-
-      </footer>
+    
 
     </div>
   );
