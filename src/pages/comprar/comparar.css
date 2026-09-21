@@ -1,0 +1,441 @@
+/* =====================================================
+   PÁGINA
+===================================================== */
+
+.comparar-page {
+  min-height: calc(100vh - 56px);
+
+  background-color: #f4f7fb;
+
+  color: #172b4d;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.comparar-contenido {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 22px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.comparar-header {
+  margin-bottom: 14px;
+}
+
+
+.comparar-header h1 {
+  margin: 0 0 5px;
+
+  font-size: 20px;
+
+  color: #172b4d;
+}
+
+
+.comparar-header p {
+  margin: 0;
+
+  font-size: 10px;
+
+  color: #627d98;
+}
+
+
+/* =====================================================
+   FILTROS
+===================================================== */
+
+.comparar-filtros {
+  background-color: white;
+
+  border: 1px solid #dfe7f0;
+
+  border-radius: 7px;
+
+  padding: 12px 10px;
+
+  display: grid;
+
+  grid-template-columns: 1.25fr 1.25fr 1.25fr 0.8fr auto;
+
+  gap: 8px;
+
+  align-items: end;
+
+  margin-bottom: 15px;
+}
+
+
+.filtro {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.filtro label {
+  font-size: 8px;
+
+  font-weight: 600;
+
+  color: #334e68;
+}
+
+
+.filtro label span {
+  color: #829ab1;
+
+  font-weight: 400;
+}
+
+
+.filtro select {
+  height: 30px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 4px;
+
+  background-color: white;
+
+  color: #334e68;
+
+  padding: 0 8px;
+
+  font-size: 8px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+
+.filtro select:focus {
+  border-color: #1677ff;
+}
+
+
+.comparar-button {
+  height: 30px;
+
+  padding: 0 15px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  background-color: #0875df;
+
+  color: white;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.comparar-button:hover {
+  background-color: #0564c2;
+}
+
+
+/* =====================================================
+   TABLA
+===================================================== */
+
+.tabla-comparacion {
+  background-color: white;
+
+  border: 1px solid #dfe7f0;
+
+  border-radius: 7px;
+
+  overflow: hidden;
+
+  margin-bottom: 15px;
+}
+
+
+.tabla-comparacion table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+
+.tabla-comparacion th {
+  height: 38px;
+
+  background-color: #ffffff;
+
+  color: #334e68;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  border-bottom: 1px solid #edf2f7;
+
+  text-align: center;
+
+  padding: 5px;
+}
+
+
+.tabla-comparacion th:first-child {
+  text-align: left;
+
+  padding-left: 15px;
+
+  width: 23%;
+}
+
+
+.tabla-comparacion td {
+  height: 34px;
+
+  border-bottom: 1px solid #edf2f7;
+
+  color: #334e68;
+
+  font-size: 8px;
+
+  text-align: center;
+
+  padding: 5px;
+}
+
+
+.tabla-comparacion td:first-child {
+  text-align: left;
+
+  padding-left: 15px;
+}
+
+
+.tabla-comparacion tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+.variacion {
+  font-weight: 600;
+}
+
+
+.variacion.positiva {
+  color: #087f3f;
+}
+
+
+/* =====================================================
+   GRÁFICAS
+===================================================== */
+
+.graficas-comparar {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+
+.grafica-comparar-card {
+  background-color: white;
+
+  border: 1px solid #dfe7f0;
+
+  border-radius: 7px;
+
+  padding: 14px;
+
+  min-height: 210px;
+}
+
+
+.grafica-comparar-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+
+.grafica-comparar-header h2 {
+  margin: 0 0 5px;
+
+  font-size: 9px;
+
+  color: #172b4d;
+}
+
+
+.grafica-comparar-header span {
+  font-size: 7px;
+
+  color: #829ab1;
+}
+
+
+/* =====================================================
+   LEYENDA
+===================================================== */
+
+.leyenda {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding-top: 1px;
+}
+
+
+.leyenda span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  white-space: nowrap;
+
+  font-size: 7px;
+
+  color: #627d98;
+}
+
+
+.punto {
+  display: inline-block;
+
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 2px;
+}
+
+
+.punto.azul {
+  background-color: #1677e8;
+}
+
+
+.punto.verde {
+  background-color: #42b883;
+}
+
+
+.punto.celeste {
+  background-color: #82c8ee;
+}
+
+
+.punto.oscuro {
+  background-color: #17365d;
+}
+
+
+/* =====================================================
+   PLACEHOLDER DE GRÁFICA
+===================================================== */
+
+.grafica-placeholder {
+  height: 155px;
+
+  margin-top: 10px;
+
+  border-top: 1px solid #f0f3f7;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.grafica-placeholder p {
+  margin: 0;
+
+  color: #9aaabd;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .comparar-filtros {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .comparar-button {
+    width: 100%;
+  }
+
+
+  .graficas-comparar {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .comparar-contenido {
+    padding: 15px;
+  }
+
+
+  .comparar-filtros {
+    grid-template-columns: 1fr;
+  }
+
+
+  .tabla-comparacion {
+    overflow-x: auto;
+  }
+
+
+  .tabla-comparacion table {
+    min-width: 650px;
+  }
+
+
+  .grafica-comparar-header {
+    flex-direction: column;
+  }
+
+
+  .leyenda {
+    flex-wrap: wrap;
+  }
+
+}

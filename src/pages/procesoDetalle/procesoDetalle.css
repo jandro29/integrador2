@@ -1,0 +1,660 @@
+/* =====================================================
+   PÁGINA
+===================================================== */
+
+.detalle-page {
+  min-height: calc(100vh - 56px);
+
+  background-color: #f4f7fb;
+
+  color: #172b4d;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.detalle-contenido {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 20px 22px 30px;
+}
+
+
+/* =====================================================
+   VOLVER
+===================================================== */
+
+.volver-resultados {
+  border: none;
+
+  background: transparent;
+
+  color: #1677ff;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  margin-bottom: 7px;
+}
+
+
+.detalle-contenido > h1 {
+  margin: 0 0 16px;
+
+  font-size: 21px;
+
+  color: #102a43;
+}
+
+
+/* =====================================================
+   INFORMACIÓN GENERAL
+===================================================== */
+
+.info-general {
+  background-color: white;
+
+  border: 1px solid #dfe7f0;
+
+  border-radius: 7px;
+
+  padding: 15px;
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 1fr 1.5fr 1.2fr 1.2fr;
+
+  gap: 15px;
+
+  margin-bottom: 15px;
+}
+
+
+.info-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.info-item > span:first-child {
+  color: #829ab1;
+
+  font-size: 8px;
+}
+
+
+.info-item strong {
+  color: #172b4d;
+
+  font-size: 9px;
+}
+
+
+.estado-detalle {
+  width: fit-content;
+
+  padding: 4px 8px;
+
+  background-color: #dff8eb;
+
+  color: #087443;
+
+  border-radius: 10px;
+
+  font-size: 8px;
+}
+
+
+.descripcion-general {
+  grid-column: 1 / -1;
+
+  border-top: 1px solid #edf2f7;
+
+  padding-top: 10px;
+
+  display: flex;
+
+  gap: 5px;
+
+  font-size: 9px;
+}
+
+
+.descripcion-general strong {
+  color: #334e68;
+}
+
+
+/* =====================================================
+   ETAPAS
+===================================================== */
+
+.etapas {
+  background-color: white;
+
+  border: 1px solid #dfe7f0;
+
+  border-radius: 7px;
+
+  padding: 15px 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+
+.etapa {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 150px;
+}
+
+
+.etapa-numero {
+  width: 23px;
+
+  height: 23px;
+
+  border-radius: 50%;
+
+  background-color: #1769e8;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.etapa-numero.verde {
+  background-color: #0ca678;
+}
+
+
+.etapa-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.etapa-info strong {
+  font-size: 9px;
+
+  color: #172b4d;
+}
+
+
+.etapa-info span {
+  font-size: 8px;
+
+  color: #829ab1;
+}
+
+
+.etapa-linea {
+  flex: 1;
+
+  height: 1px;
+
+  background-color: #8bb8ff;
+
+  position: relative;
+
+  margin: 0 15px;
+}
+
+
+.etapa-linea::after {
+  content: "›";
+
+  position: absolute;
+
+  right: -2px;
+
+  top: -8px;
+
+  color: #1769e8;
+
+  font-size: 16px;
+}
+
+
+.verde-linea {
+  background-color: #45c79a;
+}
+
+
+.verde-linea::after {
+  color: #0ca678;
+}
+
+
+/* =====================================================
+   TARJETAS DE DETALLE
+===================================================== */
+
+.detalle-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 15px;
+}
+
+
+.detalle-card {
+  background-color: white;
+
+  border: 1px solid #dfe7f0;
+
+  border-radius: 7px;
+
+  padding: 15px;
+}
+
+
+.detalle-card h2 {
+  margin: 0 0 12px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #edf2f7;
+
+  font-size: 9px;
+
+  color: #1769e8;
+}
+
+
+.detalle-datos {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.detalle-datos > div {
+  display: grid;
+
+  grid-template-columns: 1fr 1.4fr;
+
+  gap: 10px;
+}
+
+
+.detalle-datos span {
+  color: #627d98;
+
+  font-size: 8px;
+}
+
+
+.detalle-datos strong {
+  color: #172b4d;
+
+  font-size: 8px;
+
+  text-align: right;
+
+  line-height: 1.4;
+}
+
+
+.monto-verde {
+  color: #087443 !important;
+
+  background-color: #dff8eb;
+
+  padding: 4px 6px;
+
+  border-radius: 3px;
+}
+
+
+.monto-azul {
+  color: #1769e8 !important;
+
+  background-color: #e8f1ff;
+
+  padding: 4px 6px;
+
+  border-radius: 3px;
+}
+
+
+/* =====================================================
+   COMPARACIÓN DE MONTOS
+===================================================== */
+
+.montos-seccion {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+
+.montos-card {
+  background-color: white;
+
+  border: 1px solid #dfe7f0;
+
+  border-radius: 7px;
+
+  padding: 15px;
+}
+
+
+.montos-card h2 {
+  margin: 0 0 15px;
+
+  font-size: 9px;
+
+  color: #172b4d;
+}
+
+
+.montos {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.monto-box {
+  border: 1px solid #dfe7f0;
+
+  border-radius: 5px;
+
+  padding: 10px;
+
+  min-width: 105px;
+
+  text-align: center;
+}
+
+
+.monto-box span {
+  display: block;
+
+  color: #627d98;
+
+  font-size: 7px;
+
+  margin-bottom: 5px;
+}
+
+
+.monto-box strong {
+  font-size: 9px;
+
+  color: #172b4d;
+}
+
+
+.monto-box.adjudicado {
+  border-color: #a8e5cd;
+
+  background-color: #f4fffa;
+}
+
+
+.monto-box.adjudicado strong {
+  color: #087443;
+}
+
+
+.monto-box.contratado {
+  border-color: #b8d4ff;
+
+  background-color: #f5f9ff;
+}
+
+
+.monto-box.contratado strong {
+  color: #1769e8;
+}
+
+
+.flecha {
+  color: #9fb0c1;
+
+  font-size: 16px;
+}
+
+
+.variaciones {
+  border-left: 1px solid #edf2f7;
+
+  margin-left: 8px;
+
+  padding-left: 15px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  color: #829ab1;
+
+  font-size: 7px;
+}
+
+
+.variaciones strong {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 9px;
+}
+
+
+.variacion-negativa {
+  color: #0ca678;
+}
+
+
+.variacion-positiva {
+  color: #e34b4b;
+}
+
+
+/* =====================================================
+   ALERTA
+===================================================== */
+
+.alerta-card {
+  background-color: #fffdf5;
+
+  border: 1px solid #f1df9c;
+
+  border-radius: 7px;
+
+  padding: 15px;
+}
+
+
+.alerta-card h2 {
+  margin: 0 0 10px;
+
+  font-size: 9px;
+
+  color: #9a6900;
+}
+
+
+.alerta-card p {
+  margin: 0;
+
+  color: #6f6b50;
+
+  font-size: 8px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   ACCIONES
+===================================================== */
+
+.acciones {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+
+.exportar {
+  padding: 7px 12px;
+
+  margin-right: 7px;
+
+  background-color: white;
+
+  border-radius: 4px;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+
+.exportar.pdf {
+  border: 1px solid #ffb8b8;
+
+  color: #d64545;
+}
+
+
+.exportar.excel {
+  border: 1px solid #a8e5cd;
+
+  color: #087443;
+}
+
+
+.volver-button {
+  border: none;
+
+  background-color: #1757d5;
+
+  color: white;
+
+  border-radius: 4px;
+
+  padding: 8px 15px;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+
+.volver-button:hover {
+  background-color: #1048b7;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .info-general {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .detalle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .montos-seccion {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .detalle-contenido {
+    padding: 15px;
+  }
+
+  .info-general {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .etapas {
+    overflow-x: auto;
+  }
+
+  .montos {
+    flex-wrap: wrap;
+  }
+
+  .variaciones {
+    border-left: none;
+
+    border-top: 1px solid #edf2f7;
+
+    padding: 10px 0 0;
+
+    margin: 5px 0 0;
+
+    width: 100%;
+  }
+
+  .acciones {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 10px;
+  }
+
+  .volver-button {
+    width: 100%;
+  }
+
+}
