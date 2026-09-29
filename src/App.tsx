@@ -8,10 +8,11 @@ import Comparar from "./pages/comprar/comparar"
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+
+//import { useState } from 'react'
+//import heroImg from './assets/hero.png'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from './assets/vite.svg'
 import './App.css'
 
 
