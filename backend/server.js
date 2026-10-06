@@ -2,12 +2,17 @@ require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');
+
+const procesosRoutes = require('./src/routes/procesos');
+const estadisticasRoutes = require('./src/routes/estadisticas');
 const pool = require('./src/config/database');
+
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
 
 app.get('/', (req, res) => {
     res.json({
@@ -36,6 +41,15 @@ app.get('/api/prueba-db', async (req, res) => {
         });
     }
 });
+
+// Estadísticas
+app.use('/api/estadisticas', estadisticasRoutes);
+
+// Procesos
+app.use('/api/procesos', procesosRoutes);
+
+// Procesos Detalles
+app.use("/api/procesos", procesosRoutes);
 
 const PORT = 3000;
 

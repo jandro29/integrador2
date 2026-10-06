@@ -1,12 +1,59 @@
+import { useEffect, useState } from "react";
 import "./inicio.css";
 
+
+interface Estadisticas {
+  procesos: number;
+  montoReferencial: number;
+  montoAdjudicado: number;
+  montoContratado: number;
+}
+
 function Inicio() {
+  const [estadisticas, setEstadisticas] = useState<Estadisticas>({
+    procesos: 0,
+    montoReferencial: 0,
+    montoAdjudicado: 0,
+    montoContratado: 0,
+  });
+
+  const [cargando, setCargando] = useState(true);
+
+  useEffect(() => {
+    const obtenerEstadisticas = async () => {
+      try {
+        const respuesta = await fetch(
+          "http://localhost:3000/api/estadisticas"
+        );
+
+        if (!respuesta.ok) {
+          throw new Error("No se pudieron obtener las estadísticas");
+        }
+
+        const datos = await respuesta.json();
+
+        setEstadisticas(datos);
+      } catch (error) {
+        console.error("Error al obtener estadísticas:", error);
+      } finally {
+        setCargando(false);
+      }
+    };
+
+    obtenerEstadisticas();
+  }, []);
+
+  const formatearMonto = (monto: number) => {
+    return new Intl.NumberFormat("es-PE", {
+      style: "currency",
+      currency: "PEN",
+      maximumFractionDigits: 2,
+    }).format(monto);
+  };
+
   return (
     <div className="inicio">
 
-      {/* ==================================================
-          CONTENIDO PRINCIPAL
-      ================================================== */}
       <main className="contenido">
 
         {/* ==================================================
@@ -67,10 +114,11 @@ function Inicio() {
                 Procesos registrados
               </span>
 
-              {/* ==========================================
-                  ESTE DATO POSTERIORMENTE VENDRÁ DE LA BD
-              ========================================== */}
-              <strong>12,458</strong>
+              <strong>
+                {cargando
+                  ? "Cargando..."
+                  : estadisticas.procesos.toLocaleString("es-PE")}
+              </strong>
 
               <small>
                 Total de procesos
@@ -94,10 +142,11 @@ function Inicio() {
                 Monto referencial
               </span>
 
-              {/* ==========================================
-                  ESTE DATO POSTERIORMENTE VENDRÁ DE LA BD
-              ========================================== */}
-              <strong>S/ 3,256 M</strong>
+              <strong>
+                {cargando
+                  ? "Cargando..."
+                  : formatearMonto(estadisticas.montoReferencial)}
+              </strong>
 
               <small>
                 Monto total
@@ -121,10 +170,11 @@ function Inicio() {
                 Monto adjudicado
               </span>
 
-              {/* ==========================================
-                  ESTE DATO POSTERIORMENTE VENDRÁ DE LA BD
-              ========================================== */}
-              <strong>S/ 2,945 M</strong>
+              <strong>
+                {cargando
+                  ? "Cargando..."
+                  : formatearMonto(estadisticas.montoAdjudicado)}
+              </strong>
 
               <small>
                 Monto total
@@ -148,10 +198,11 @@ function Inicio() {
                 Monto contratado
               </span>
 
-              {/* ==========================================
-                  ESTE DATO POSTERIORMENTE VENDRÁ DE LA BD
-              ========================================== */}
-              <strong>S/ 3,021 M</strong>
+              <strong>
+                {cargando
+                  ? "Cargando..."
+                  : formatearMonto(estadisticas.montoContratado)}
+              </strong>
 
               <small>
                 Monto total
@@ -169,9 +220,6 @@ function Inicio() {
         ================================================== */}
         <section className="dashboard">
 
-          {/* ==================================================
-              GRÁFICA 1
-          ================================================== */}
           <div className="grafica-card">
 
             <div className="grafica-header">
@@ -186,13 +234,6 @@ function Inicio() {
 
             </div>
 
-
-            {/* ==================================================
-                AQUÍ VA LA GRÁFICA
-
-                Posteriormente reemplazaremos este contenido
-                por una gráfica conectada a los datos de la BD.
-            ================================================== */}
             <div className="grafica-placeholder">
 
               <p>
@@ -204,9 +245,6 @@ function Inicio() {
           </div>
 
 
-          {/* ==================================================
-              GRÁFICA 2
-          ================================================== */}
           <div className="grafica-card">
 
             <div className="grafica-header">
@@ -221,13 +259,6 @@ function Inicio() {
 
             </div>
 
-
-            {/* ==================================================
-                AQUÍ VA LA GRÁFICA
-
-                Posteriormente reemplazaremos este contenido
-                por una gráfica conectada a los datos de la BD.
-            ================================================== */}
             <div className="grafica-placeholder">
 
               <p>
@@ -274,9 +305,6 @@ function Inicio() {
         </section>
 
       </main>
-
-
-    
 
     </div>
   );
