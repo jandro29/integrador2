@@ -36,9 +36,7 @@ body {
 
 .contenido {
   max-width: 1400px;
-
   margin: 0 auto;
-
   padding: 16px 22px 30px;
 }
 
@@ -49,21 +47,13 @@ body {
 
 .hero {
   background-color: white;
-
   border: 1px solid #dfe7f0;
-
   border-radius: 8px;
-
   min-height: 155px;
-
   padding: 25px 30px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   box-sizing: border-box;
 }
 
@@ -73,23 +63,16 @@ body {
 
 .hero h1 {
   margin: 0 0 8px;
-
   font-size: 25px;
-
   line-height: 1.15;
-
   color: #102a43;
 }
 
 .hero p {
   margin: 0 0 16px;
-
   max-width: 590px;
-
   color: #627d98;
-
   font-size: 12px;
-
   line-height: 1.5;
 }
 
@@ -100,31 +83,20 @@ body {
 
 .buscador {
   width: 300px;
-
   height: 34px;
-
   display: flex;
-
   border: 1px solid #ccd8e5;
-
   border-radius: 5px;
-
   overflow: hidden;
-
   background: white;
 }
 
 .buscador input {
   flex: 1;
-
   border: none;
-
   outline: none;
-
   padding: 0 10px;
-
   font-size: 10px;
-
   color: #334e68;
 }
 
@@ -134,23 +106,16 @@ body {
 
 .buscador button {
   width: 40px;
-
   border: none;
-
   background: white;
-
   cursor: pointer;
-
   color: #456b92;
 }
 
 .hero-ilustracion {
   width: 180px;
-
   text-align: center;
-
   font-size: 80px;
-
   opacity: 0.7;
 }
 
@@ -161,95 +126,66 @@ body {
 
 .estadisticas {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 12px;
-
   margin-top: 14px;
 }
 
 .estadistica-card {
   background-color: white;
-
   border: 1px solid #dfe7f0;
-
   border-radius: 8px;
-
   min-height: 78px;
-
   padding: 14px;
-
   display: flex;
-
   align-items: center;
-
   gap: 12px;
-
   box-sizing: border-box;
 }
 
 .estadistica-icon {
   width: 34px;
-
   height: 34px;
-
   border-radius: 50%;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   font-size: 14px;
-
   font-weight: 700;
 }
 
 .estadistica-icon.azul {
   background-color: #e8f1ff;
-
   color: #1677ff;
 }
 
 .estadistica-icon.verde {
   background-color: #e5f8ef;
-
   color: #10a96b;
 }
 
 .estadistica-icon.celeste {
   background-color: #e5f6ff;
-
   color: #168acb;
 }
 
 .estadistica-label {
   display: block;
-
   color: #627d98;
-
   font-size: 9px;
-
   margin-bottom: 3px;
 }
 
 .estadistica-card strong {
   display: block;
-
   color: #172b4d;
-
   font-size: 16px;
 }
 
 .estadistica-card small {
   display: block;
-
   color: #9fb0c1;
-
   font-size: 8px;
-
   margin-top: 2px;
 }
 
@@ -260,11 +196,8 @@ body {
 
 .dashboard {
   display: grid;
-
   grid-template-columns: 1fr 1.25fr 0.85fr;
-
   gap: 12px;
-
   margin-top: 14px;
 }
 
@@ -275,33 +208,26 @@ body {
 
 .grafica-card {
   background-color: white;
-
   border: 1px solid #dfe7f0;
-
   border-radius: 8px;
-
   min-height: 150px;
-
   padding: 14px;
-
   box-sizing: border-box;
+
+  /* NUEVO: evita que la gráfica desborde el grid */
+  min-width: 0;
 }
 
 .grafica-header h3 {
   margin: 0;
-
   color: #172b4d;
-
   font-size: 11px;
 }
 
 .grafica-header span {
   display: block;
-
   margin-top: 3px;
-
   color: #9fb0c1;
-
   font-size: 8px;
 }
 
@@ -311,19 +237,30 @@ body {
 ========================= */
 
 .grafica-placeholder {
-  min-height: 105px;
+  /* CAMBIADO: altura fija (antes era min-height: 105px) */
+  width: 100%;
+  height: 240px;
+  min-width: 0;
+  margin-top: 12px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 }
 
 .grafica-placeholder p {
-  font-size: 18px;
-
+  font-size: 12px;
   color: #9fb0c1;
+}
+
+/* NUEVO: texto pequeño en ejes y tooltip de recharts */
+.grafica-placeholder .recharts-text {
+  font-size: 10px;
+  fill: #627d98;
+}
+
+.grafica-placeholder .recharts-tooltip-wrapper {
+  font-size: 11px;
 }
 
 
@@ -333,57 +270,39 @@ body {
 
 .revision-card {
   background-color: #fffdf5;
-
   border: 1px solid #f1df9c;
-
   border-radius: 8px;
-
   padding: 15px;
-
   min-height: 150px;
-
   box-sizing: border-box;
 }
 
 .revision-title {
   display: flex;
-
   align-items: center;
-
   gap: 7px;
 }
 
 .revision-title h3 {
   margin: 0;
-
   font-size: 11px;
-
   color: #3b3b2e;
 }
 
 .revision-card > p {
   color: #6f6b50;
-
   font-size: 9px;
-
   line-height: 1.5;
-
   margin: 14px 0;
 }
 
 .revision-button {
   border: none;
-
   background: transparent;
-
   color: #1677ff;
-
   font-size: 9px;
-
   font-weight: 600;
-
   cursor: pointer;
-
   padding: 0;
 }
 
@@ -394,17 +313,11 @@ body {
 
 .footer {
   border-top: 1px solid #dfe7f0;
-
   background-color: white;
-
   padding: 8px 25px;
-
   display: flex;
-
   justify-content: space-between;
-
   color: #829ab1;
-
   font-size: 8px;
 }
 
@@ -434,7 +347,6 @@ body {
 
   .navbar {
     padding: 0 15px;
-
     gap: 15px;
   }
 
@@ -464,7 +376,6 @@ body {
 
   .footer {
     flex-direction: column;
-
     gap: 5px;
   }
 

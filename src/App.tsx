@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from "./pages/inicio/inicio";
 import Procesos from "./pages/procesos/procesos";
 import ProcesoDetalle from "./pages/procesoDetalle/procesoDetalle";
-import Comparar from "./pages/comprar/comparar";
+import Comparar from "./pages/comparar/comparar";
 
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
